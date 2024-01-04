@@ -2,8 +2,8 @@ body {
     background: #025385;
     display: grid;
     place-items: center;
-    margin: 0;
-    padding: 0;
+    height: 100vh;
+    margin: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #ff7b00;
 }
@@ -14,7 +14,6 @@ body {
     border-radius: 20px;
     height: 85vh;
     width: 80vw;
-    max-width: 800px; /* Added max-width for better responsiveness */
     box-shadow: 0 5px 15px rgb(29, 50, 59);
     text-align: center;
     perspective: 1000px;
@@ -39,10 +38,6 @@ body {
 
 .front {
     z-index: 2;
-}
-
-.back {
-    transform: rotateY(180deg);
 }
 
 .back {
@@ -104,30 +99,31 @@ body {
     background-color: #e55e00;
 }
 
-@media only screen and (min-width: 1000px) {
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-
-    .card {
-        flex-direction: column;
-        width: 70vw;
-        max-width: 1000px;
-    }
-
-    .card video.birthday {
-        width: 100%;
-        max-width: 50vw;
-        max-height: unset;
-    }
-}
-
-/* Adjustments for smaller screens */
+/* Media Queries for responsiveness */
 @media only screen and (max-width: 600px) {
     .card {
         width: 90vw;
+        height: 80vh;
+    }
+
+    .front,
+    .back {
+        padding: 5px;
+    }
+
+    .back-content {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+    .card {
+        width: 70vw;
+    }
+}
+
+@media only screen and (min-width: 1001px) {
+    .card {
+        width: 60vw;
     }
 }
