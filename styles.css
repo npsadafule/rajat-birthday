@@ -2,8 +2,8 @@ body {
     background: #025385;
     display: grid;
     place-items: center;
-    height: 100vh;
-    margin: 10px;
+    margin: 0;
+    padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #ff7b00;
 }
@@ -14,6 +14,7 @@ body {
     border-radius: 20px;
     height: 85vh;
     width: 80vw;
+    max-width: 800px; /* Added max-width for better responsiveness */
     box-shadow: 0 5px 15px rgb(29, 50, 59);
     text-align: center;
     perspective: 1000px;
@@ -62,7 +63,6 @@ body {
     margin: 10px;
 }
 
-
 .card.is-flipped .front {
     transform: rotateY(180deg);
 }
@@ -105,9 +105,19 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
     .card {
         flex-direction: column;
+        width: 70vw;
+        max-width: 1000px;
     }
+
     .card video.birthday {
         width: 100%;
         max-width: 50vw;
@@ -115,15 +125,9 @@ body {
     }
 }
 
-.god{
-    padding: 30px;
-    color:white;
-}
-
-.god+p{
-    color: gold;
-}
-
-.rajat{
-    padding-bottom: 20px;    
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 90vw;
+    }
 }
