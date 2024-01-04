@@ -1,4 +1,4 @@
-# rajat-birthday
+# Rajat-birthday
 Birthday Card Animation
 # Birthday Card Animation
 
