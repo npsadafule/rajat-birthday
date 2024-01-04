@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Happy Birthday</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <div class="front">
+            <video class="birthday" height="300" autoplay controls loop>
+                <source src="Bala.mp4" type="video/mp4">
+            </video>
+            <h1 class="pride">Happy Birthday Rajat !</h1>
+            <button class="flip-btn" onclick="flipCard()">Flip</button>
+        </div>
+        <div class="back">
+            <div class="back-content">
+                <img src="rajat.jpeg" alt="rajat" class="rajat" height="240">
+                <p>Happy Birthday. Today is the day to celebrate your very very ordinary existence. Another year closer to the grave, so congrats on that!
+                    <br><br>
+                    Another year has passed, and here we are, celebrating the passage of time. 
+                    But you should know birthdays don't really matter. Well, nothing really matters! Except maybe your Mom. Your mom matters a bit.
+                    <br><br>
+                    May this year bring you a lot of pain and suffering because, as you know,
+                </p>
+                <p>"You have to hurt to grow, fall to know, lose to gain because the only thing that teaches truth is Pain"</p>
+                <div class="god">
+                    <p>Wishes from the honored one.</p>
+                    <p class="from"> - Neel Sadafule -</p>
+                </div>
+            </div>
+            <button class="flip-btn" onclick="flipCard()">Flip</button>
+        </div>
+    </div>
+
+    <script>
+        function flipCard() {
+            const card = document.querySelector('.card');
+            card.classList.toggle('is-flipped');
+        }
+    </script>
+</body>
+</html>
